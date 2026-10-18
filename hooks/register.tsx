@@ -24,7 +24,7 @@ function auth(cfg: Cfg) {
 
 async function refresh($: EngineInterface, cfg: Cfg) {
   if (!cfg.token) {
-    await update($, feed, f => ({ ...f, error: 'Set your Todoist API token in /config (todoist-pane).' }))
+    await update($, feed, f => ({ ...f, error: 'Set your Todoist API token: run "claude plugin configure todoist-pane --values-stdin" in a shell (see README).' }))
     return
   }
   try {

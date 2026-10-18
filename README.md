@@ -27,11 +27,22 @@ In the desktop app, where `/plugin` does not run: click + next to the prompt box
 
 ## Settings
 
-Set these in `/config` under todoist-pane:
+### API token (required)
+
+Get it in Todoist under Settings > Integrations > Developer. It's a secret, so it doesn't show in `/config`. Set it from a shell:
+
+```
+claude plugin configure todoist-pane --values-stdin
+```
+
+Paste `{"api_token": "YOUR_TOKEN"}`, press Enter, then Ctrl+D (Windows: Ctrl+Z, Enter). Then run `/reload-plugins` in Claude Code. `claude plugin configure todoist-pane` shows which settings are still unset.
+
+### Other settings
+
+These appear in `/config` under todoist-pane:
 
 | Setting | What it does |
 | --- | --- |
-| Todoist API token | Required. In Todoist: Settings > Integrations > Developer. Stored as a secret. |
 | Todoist filter | Which tasks to show, in Todoist filter syntax. Default `today \| overdue`. Empty shows all open tasks. |
 | Refresh every (minutes) | Default 5. |
 

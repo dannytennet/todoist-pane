@@ -1,6 +1,6 @@
 {
   "name": "todoist-pane",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shows your Todoist tasks in a side panel",
   "types": "./types/index.d.ts",
   "userConfig": {
