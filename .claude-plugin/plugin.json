@@ -1,0 +1,29 @@
+{
+  "name": "todoist-pane",
+  "version": "0.1.0",
+  "description": "Shows your Todoist tasks in a side panel",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "api_token": {
+      "type": "string",
+      "title": "Todoist API token",
+      "description": "From Todoist: Settings > Integrations > Developer",
+      "sensitive": true,
+      "required": false
+    },
+    "filter": {
+      "type": "string",
+      "title": "Todoist filter",
+      "description": "Which tasks to show, using Todoist filter syntax (e.g. 'today | overdue'). Empty shows all open tasks.",
+      "default": "today | overdue",
+      "required": false
+    },
+    "refresh_minutes": {
+      "type": "number",
+      "title": "Refresh every (minutes)",
+      "default": 5,
+      "required": false,
+      "description": "How often the panel reloads your tasks"
+    }
+  }
+}
